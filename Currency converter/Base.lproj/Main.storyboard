@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_converter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-0B-njf">
+                                <rect key="frame" x="141" y="271.5" width="93" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKJ-Gv-Vdk">
+                                <rect key="frame" x="179.5" y="319.5" width="16" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA3-xw-gAu">
+                                <rect key="frame" x="141.5" y="353.5" width="93" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86J-E8-QfQ" customClass="CurrencyPickerView" customModule="Currency_converter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" red="0.14825361967086792" green="0.11558271199464798" blue="0.3747551441192627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="в" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-S5-975">
+                                <rect key="frame" x="237.5" y="543.5" width="14" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.58823529411764708" blue="0.70588235294117641" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.070588235294117646" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NA3-xw-gAu" firstAttribute="top" secondItem="aKJ-Gv-Vdk" secondAttribute="bottom" constant="5" id="4ao-ce-6ZP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="86J-E8-QfQ" secondAttribute="bottom" id="4nc-8z-H1b"/>
+                            <constraint firstItem="ilV-S5-975" firstAttribute="centerX" secondItem="86J-E8-QfQ" secondAttribute="centerX" multiplier="1.3" id="AIB-uv-v5N"/>
+                            <constraint firstItem="86J-E8-QfQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BZ1-A4-J43"/>
+                            <constraint firstItem="ilV-S5-975" firstAttribute="centerY" secondItem="86J-E8-QfQ" secondAttribute="centerY" id="IJ4-YG-IAF"/>
+                            <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="top" secondItem="xAt-0B-njf" secondAttribute="bottom" constant="5" id="S6Z-F7-jWW"/>
+                            <constraint firstAttribute="trailing" secondItem="86J-E8-QfQ" secondAttribute="trailing" id="bkm-5d-6yK"/>
+                            <constraint firstItem="NA3-xw-gAu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egW-fp-ByZ"/>
+                            <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gC4-sA-OUt"/>
+                            <constraint firstItem="xAt-0B-njf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEL-c3-Gc0"/>
+                            <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yyf-HV-b99"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyPicker" destination="86J-E8-QfQ" id="mOg-pF-MXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
