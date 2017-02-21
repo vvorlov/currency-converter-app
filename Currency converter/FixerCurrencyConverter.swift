@@ -15,12 +15,19 @@ class FixerCurrencyConverter: NSObject, CurrencyConverter {
     fileprivate var currencies: [String : Double]? = nil
     fileprivate var baseCurrency: String? = nil
     
-    override init() {
-        super.init()
-        
-        self.getCurrencyTitles { _ in }
-    }
     
+    // MARK: - CurrencyConverter
+    
+    func isAvailable(completion: @escaping (Bool) -> Void) {
+        self.requestCurrencyRates(baseCurrency: "RUB") { (data, error) in
+            if let _ = error {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
+
     func getCurrencyTitles(completion: @escaping([String]) -> Void) {
         if let rates = currencies {
             completion(Array(rates.keys))
@@ -73,7 +80,10 @@ class FixerCurrencyConverter: NSObject, CurrencyConverter {
     }
     
     fileprivate func requestCurrencyRates(baseCurrency: String, parseHandler: @escaping (Data?, Error?) -> Void) {
-        let dataTask = URLSession.shared.dataTask(with: URL(string: url + baseCurrency)!) {
+        var request = URLRequest(url: URL(string: url + baseCurrency)!)
+        request.timeoutInterval = 5
+        
+        let dataTask = URLSession.shared.dataTask(with: request) {
             (dataReceived, response, error) in
             parseHandler(dataReceived, error)
         }

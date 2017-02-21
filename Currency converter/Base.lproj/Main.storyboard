@@ -50,26 +50,52 @@
                                 <color key="textColor" red="0.14509803921568626" green="0.58823529411764708" blue="0.70588235294117641" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llo-kq-Zrc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Загрузка..." textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-GP-Jyl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14825361967086792" green="0.11558271199464798" blue="0.3747551441192627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="aAj-H9-4Vi">
+                                <rect key="frame" x="178" y="264" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392156862745" green="0.070588235294117646" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Llo-kq-Zrc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="4Gg-3H-biZ"/>
                             <constraint firstItem="NA3-xw-gAu" firstAttribute="top" secondItem="aKJ-Gv-Vdk" secondAttribute="bottom" constant="5" id="4ao-ce-6ZP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="86J-E8-QfQ" secondAttribute="bottom" id="4nc-8z-H1b"/>
                             <constraint firstItem="ilV-S5-975" firstAttribute="centerX" secondItem="86J-E8-QfQ" secondAttribute="centerX" multiplier="1.3" id="AIB-uv-v5N"/>
                             <constraint firstItem="86J-E8-QfQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BZ1-A4-J43"/>
                             <constraint firstItem="ilV-S5-975" firstAttribute="centerY" secondItem="86J-E8-QfQ" secondAttribute="centerY" id="IJ4-YG-IAF"/>
+                            <constraint firstItem="Llo-kq-Zrc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KTO-2g-YwJ"/>
+                            <constraint firstItem="aAj-H9-4Vi" firstAttribute="centerY" secondItem="NA3-xw-gAu" secondAttribute="centerY" id="OhY-wg-IE3"/>
                             <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="top" secondItem="xAt-0B-njf" secondAttribute="bottom" constant="5" id="S6Z-F7-jWW"/>
+                            <constraint firstItem="aAj-H9-4Vi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ug7-xH-CUo"/>
+                            <constraint firstItem="Llo-kq-Zrc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y3z-YS-D1h"/>
+                            <constraint firstItem="aAj-H9-4Vi" firstAttribute="centerX" secondItem="NA3-xw-gAu" secondAttribute="centerX" id="YGG-38-JFE"/>
                             <constraint firstAttribute="trailing" secondItem="86J-E8-QfQ" secondAttribute="trailing" id="bkm-5d-6yK"/>
                             <constraint firstItem="NA3-xw-gAu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egW-fp-ByZ"/>
                             <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gC4-sA-OUt"/>
                             <constraint firstItem="xAt-0B-njf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEL-c3-Gc0"/>
+                            <constraint firstItem="Llo-kq-Zrc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="ote-Rh-8r2"/>
                             <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="yyf-HV-b99"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="aAj-H9-4Vi" id="M5H-Ux-3Cf"/>
                         <outlet property="baseCurrencyLabel" destination="xAt-0B-njf" id="7uV-DT-Sct"/>
                         <outlet property="currencyPicker" destination="86J-E8-QfQ" id="mOg-pF-MXc"/>
+                        <outlet property="internetConnectionLabel" destination="DhM-GP-Jyl" id="Q4a-Pw-k0f"/>
+                        <outlet property="internetConnectionView" destination="Llo-kq-Zrc" id="hbd-b5-fsD"/>
                         <outlet property="resCurrencyLabel" destination="NA3-xw-gAu" id="owt-GE-rB6"/>
                     </connections>
                 </viewController>

@@ -11,4 +11,6 @@ import UIKit
 protocol CurrencyConverter {
     func getCurrencyTitles(completion: @escaping([String]) -> Void)
     func convert(from original: String, to dest: String, completion: @escaping(Float) -> Void)
+    
+    func isAvailable(completion: @escaping(Bool)->Void)
 }
