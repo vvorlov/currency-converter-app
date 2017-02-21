@@ -16,6 +16,7 @@
 		4C0D4FF91E5B8DFC001AFEA3 /* FixerCurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D4FF81E5B8DFC001AFEA3 /* FixerCurrencyConverter.swift */; };
 		4C0D4FFB1E5B8E12001AFEA3 /* CurrencyUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D4FFA1E5B8E12001AFEA3 /* CurrencyUpdater.swift */; };
 		4C0D4FFD1E5B92BB001AFEA3 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D4FFC1E5B92BB001AFEA3 /* AppColors.swift */; };
+		4C0D4FFF1E5CD7A8001AFEA3 /* CurrencyResultViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D4FFE1E5CD7A8001AFEA3 /* CurrencyResultViewUpdater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4C0D4FF81E5B8DFC001AFEA3 /* FixerCurrencyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixerCurrencyConverter.swift; sourceTree = "<group>"; };
 		4C0D4FFA1E5B8E12001AFEA3 /* CurrencyUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyUpdater.swift; sourceTree = "<group>"; };
 		4C0D4FFC1E5B92BB001AFEA3 /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		4C0D4FFE1E5CD7A8001AFEA3 /* CurrencyResultViewUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyResultViewUpdater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				4C0D4FF81E5B8DFC001AFEA3 /* FixerCurrencyConverter.swift */,
 				4C0D4FFA1E5B8E12001AFEA3 /* CurrencyUpdater.swift */,
 				4C0D4FFC1E5B92BB001AFEA3 /* AppColors.swift */,
+				4C0D4FFE1E5CD7A8001AFEA3 /* CurrencyResultViewUpdater.swift */,
 			);
 			path = "Currency converter";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				4C0D4FF71E5B8A03001AFEA3 /* CurrencyPickerView.swift in Sources */,
 				4C0D4FFD1E5B92BB001AFEA3 /* AppColors.swift in Sources */,
 				4C0D4FFB1E5B8E12001AFEA3 /* CurrencyUpdater.swift in Sources */,
+				4C0D4FFF1E5CD7A8001AFEA3 /* CurrencyResultViewUpdater.swift in Sources */,
 				4C0D4FE51E5B8358001AFEA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

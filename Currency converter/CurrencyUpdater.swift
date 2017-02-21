@@ -9,6 +9,6 @@
 import UIKit
 
 protocol CurrencyConverter {
-    func getCurrencyTitles() -> [String]
-    func convert(amount: Int, from original: String, to dest: String) -> Float
+    func getCurrencyTitles(completion: @escaping([String]) -> Void)
+    func convert(from original: String, to dest: String, completion: @escaping(Float) -> Void)
 }

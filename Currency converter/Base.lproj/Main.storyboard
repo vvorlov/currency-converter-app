@@ -23,19 +23,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-0B-njf">
-                                <rect key="frame" x="141" y="271.5" width="93" height="43"/>
+                                <rect key="frame" x="141" y="171" width="93" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKJ-Gv-Vdk">
-                                <rect key="frame" x="179.5" y="319.5" width="16" height="29"/>
+                                <rect key="frame" x="179.5" y="219" width="16" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA3-xw-gAu">
-                                <rect key="frame" x="141.5" y="353.5" width="93" height="43"/>
+                                <rect key="frame" x="141.5" y="253" width="93" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.77254901960784317" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,9 +44,9 @@
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
                                 <color key="backgroundColor" red="0.14825361967086792" green="0.11558271199464798" blue="0.3747551441192627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="в" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-S5-975">
-                                <rect key="frame" x="237.5" y="543.5" width="14" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-S5-975">
+                                <rect key="frame" x="233.5" y="543.5" width="22" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="0.14509803921568626" green="0.58823529411764708" blue="0.70588235294117641" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -63,11 +63,14 @@
                             <constraint firstItem="NA3-xw-gAu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egW-fp-ByZ"/>
                             <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gC4-sA-OUt"/>
                             <constraint firstItem="xAt-0B-njf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEL-c3-Gc0"/>
-                            <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yyf-HV-b99"/>
+                            <constraint firstItem="aKJ-Gv-Vdk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="yyf-HV-b99"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="baseCurrencyLabel" destination="xAt-0B-njf" id="7uV-DT-Sct"/>
                         <outlet property="currencyPicker" destination="86J-E8-QfQ" id="mOg-pF-MXc"/>
+                        <outlet property="resCurrencyLabel" destination="NA3-xw-gAu" id="owt-GE-rB6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
